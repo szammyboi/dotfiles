@@ -1,0 +1,9 @@
+[tools]
+node = '24'
+python = '3'
+lua = '5'
+go = "1.24.5"
+rust = "1.88.0"
+erlang = "27"
+elixir = "1.18-otp-27"
+java = "24"

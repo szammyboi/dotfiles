@@ -28,19 +28,20 @@
 # brownBracket = "",
 # purpleBracket = "",
 
-# caladanBg0 = "#090F0C",
-# caladanBg1 = "#101A15",
-# caladanBg2 = "#2D4539",
-# caladanTeal0 = "#017673",
-# caladanConstant = "#1D7EAB",
-# caladanFunction = "#BA7A09",
-# caladanNumber = "#A8A210",
-# caladanString = "#A0D8DE",
-# caladanType = "#687822",
-# caladanPunctuation = "#856144",
-# caladanDataType = "#0D757E",
-# caladanOther = "#017673",
-# caladanVar = "#FFA300",
+#arrakisBg0 = "#1C140D",
+#	arrakisBg1 = "#241A12",
+#	arrakisBg2 = "#4D3827",
+
+#	arrakisTeal0 = "#017673", --
+#	arrakisConstant = "#8B3F3F",
+#	arrakisFunction = "#D13500",
+#	arrakisNumber = "#7B9695",
+#	arrakisString = "#db582c",
+#	arrakisType = "#FFA300",
+#	arrakisPunctuation = "#856144",
+#	arrakisDataType = "#B90B30",
+#	arrakisOther = "#db9c81",
+#	arrakisVar = "#03928E",
 
 [manager]
 marker_copied = { fg = "#98bb6c", bg = "#98bb6c" }
@@ -64,14 +65,14 @@ count_cut = { fg = "#1f1f28", bg = "#e46876" }
 count_selected = { fg = "#1f1f28", bg = "#e6c384" }
 
 border_symbol = "│"
-border_style = { fg = "#dcd7ba" }
+border_style = { fg = "#D4C09A" }
 
 
 [mode]
-normal_main = { fg = "#1f1f28", bg = "#687822" }
-normal_alt = { fg = "#687822", bg = "#2a2a37" }
-select_main = { fg = "#1f1f28", bg = "#957fb8" }
-select_alt = { fg = "#957fb8", bg = "#2a2a37" }
+normal_main = { fg = "#1f1f28", bg = "#03928E" }
+normal_alt = { fg = "#03928E", bg = "#2a2a37" }
+select_main = { fg = "#1f1f28", bg = "#FFA300" }
+select_alt = { fg = "#FFA300", bg = "#2a2a37" }
 unset_main = { fg = "#1f1f28", bg = "#e6c384" }
 unset_alt = { fg = "#e6c384", bg = "#2a2a37" }
 
@@ -81,7 +82,7 @@ sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 overall = { fg = "#c8c093", bg = "#16161d" }
 
-progress_label = { fg = "#687822", bg = "#2a2a37", bold = true }
+progress_label = { fg = "#FFA300", bg = "#2a2a37", bold = true }
 progress_normal = { fg = "#2a2a37", bg = "#1f1f28" }
 progress_error = { fg = "#2a2a37", bg = "#1f1f28" }
 
@@ -98,7 +99,7 @@ active = { fg = "#957fb8", bold = true }
 inactive = {}
 
 [input]
-border = { fg = "#7fb4ca" }
+border = { fg = "#03928E" }
 title = {}
 value = {}
 selected = { reversed = true }
@@ -119,7 +120,7 @@ separator = " - "
 separator_style = { fg = "#727169" }
 mask = { bg = "#16161d" }
 rest = { fg = "#727169" }
-cand = { fg = "#687822" }
+cand = { fg = "#FFA300" }
 desc = { fg = "#54546d" }
 
 [help]
@@ -155,6 +156,6 @@ rules = [
     { name = "*", is = "exec", fg = "#76946a" },
 
     # fallback
-    { name = "*", fg = "#D5A751" },
-    { name = "*/", fg = "#687822" },
+    { name = "*", fg = "#D4C09A" },
+    { name = "*/", fg = "#D13500" },
 ]

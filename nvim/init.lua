@@ -7,5 +7,10 @@ vim.diagnostic.config({
   severity_sort = true,
   float = { border = "none", source = "never" },
 })
+vim.filetype.add({
+  extension = {
+    mdx = 'mdx'
+  }
+})
 require("config.lazy")
 require("config.options")

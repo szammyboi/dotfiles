@@ -29,18 +29,25 @@ return {
 				"elixir",
 				"heex",
 				"eex",
-				"swift"
+				"swift",
+				"markdown_inline"
 			}
 		},
 		config = function(self, opts)
 			require('nvim-treesitter.configs').setup(opts)
+			vim.treesitter.language.register("markdown", "mdx")
 		end
+	},
+	{
+	  "davidmh/mdx.nvim",
+	  config = true,
+	  dependencies = {"nvim-treesitter/nvim-treesitter"}
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
 			ensure_installed = {
-				"astro",
+--				"astro",
 				"lua_ls",
 				"clangd",
 				"glsl_analyzer",
@@ -53,6 +60,12 @@ return {
 				"pyright",
 				"gopls",
 				"lexical",
+
+				"astro",
+				"tsserver",
+				"html",
+				"cssls",
+				"tailwindcss",
 			},
 			automatic_installation = true
 		},
@@ -63,6 +76,12 @@ return {
 		config = function()
 			local lspconfig = require('lspconfig')
 			vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename);
+
+			lspconfig.astro.setup({
+			   capabilities = capabilities,
+			   on_attach = on_attach,
+			   filetypes = { "astro" },
+			})
 
 			lspconfig.lexical.setup {
 				  cmd = { "/Users/szammy/.config/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },

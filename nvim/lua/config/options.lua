@@ -12,4 +12,4 @@ vim.opt.signcolumn='number'
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
-vim.cmd.colorscheme("kanagawa")
+vim.cmd.colorscheme("caladan")

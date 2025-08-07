@@ -6,8 +6,9 @@ sbar.default({
     background = {
         border_color = colors.accent_bright,
         border_width = 0,
-        color = colors.bg1,
-        corner_radius = 6,
+        color = colors.with_alpha(colors.bg1, 0.5),
+        highlight_color = colors.bg1,
+        corner_radius = 16,
         height = settings.height,
         image = {
             corner_radius = 9,

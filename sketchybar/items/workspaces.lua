@@ -145,24 +145,25 @@ sbar.exec(query_workspaces, function(workspaces_and_monitors)
 
         local workspace = sbar.add("item", {
             background = {
-                color = colors.bg1,
+                color = colors.with_alpha(colors.bg1, 0.5),
+				highlight_color = colors.white,
                 drawing = true,
             },
             click_script = "aerospace workspace " .. workspace_index,
             drawing = false, -- Hide all items at first
             icon = {
-                color = colors.with_alpha(colors.white, 0.3),
+                color = colors.with_alpha(colors.white, 0.5),
                 drawing = true,
                 font = { family = settings.font.numbers },
                 highlight_color = colors.white,
-                padding_left = 5,
+                padding_left = 12,
                 padding_right = 4,
                 string = workspace_index
             },
             label = {
-                color = colors.with_alpha(colors.white, 0.3),
+                color = colors.with_alpha(colors.white, 0.5),
                 drawing = true,
-                font = "sketchybar-app-font:Regular:20.0",
+                font = "sketchybar-app-font:Regular:16.0",
                 highlight_color = colors.white,
                 padding_left = 2,
                 padding_right = 12,
@@ -178,6 +179,7 @@ sbar.exec(query_workspaces, function(workspaces_and_monitors)
 
             sbar.animate("tanh", 10, function()
                 workspace:set({
+                    background = { highlight = is_focused },
                     icon = { highlight = is_focused },
                     label = { highlight = is_focused },
                     blur_radius = 30,
@@ -208,6 +210,7 @@ sbar.exec(query_workspaces, function(workspaces_and_monitors)
     sbar.exec("aerospace list-workspaces --focused", function(focused_workspace)
         local focused_workspace = focused_workspace:match("^%s*(.-)%s*$")
         workspaces[focused_workspace]:set({
+            background = { highlight = true },
             icon = { highlight = true },
             label = { highlight = true },
         })

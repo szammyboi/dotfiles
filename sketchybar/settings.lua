@@ -1,21 +1,21 @@
 return {
     font = {
-        text = "DepartureMono Nerd Font",
-        numbers = "DepartureMono Nerd Font",
-        size = 20.0,
+        text = "Hack Nerd Font",
+        numbers = "Hack Nerd Font",
+        size = 16.0,
         style_map = {
             ["Regular"] = "Regular",
         },
     },
     font_icon = {
-        text = "DepartureMono Nerd Font",
-        numbers = "DepartureMono Nerd Font",
-        size = 20.0,
+        text = "Hack Nerd Font",
+        numbers = "Hack Nerd Font",
+        size = 16.0,
         style_map = {
             ["Regular"] = "Regular",
         },
     },
-    height = 30,
+    height = 26,
     paddings = 8,
     group_paddings = 5,
     padding = {

@@ -1,5 +1,5 @@
 command = /opt/homebrew/bin/fish --login --interactive
-font-family = "DepartureMono Nerd Font"
+font-family = "Hack Nerd Font"
 font-thicken = true
 font-thicken-strength = 120
 font-size = 15
@@ -10,7 +10,10 @@ background = "#171814"
 background = "#1C140D"
 background = "#090F0C"
 background = "#1f1f28"
-background-opacity = 0.9
-background-blur = true
+
+background = "#090F0C"
+
+background-opacity = 1.9
+background-blur = false
 macos-titlebar-proxy-icon = hidden
 macos-icon = retro

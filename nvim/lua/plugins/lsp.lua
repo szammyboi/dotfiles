@@ -30,7 +30,9 @@ return {
 				"heex",
 				"eex",
 				"swift",
-				"markdown_inline"
+				"markdown_inline",
+				"nim",
+				"zig"
 			}
 		},
 		config = function(self, opts)
@@ -60,12 +62,13 @@ return {
 				"pyright",
 				"gopls",
 				"lexical",
-
+				"zls",
 				"astro",
 				"tsserver",
 				"html",
 				"cssls",
 				"tailwindcss",
+				"nimlangserver"
 			},
 			automatic_installation = true
 		},
@@ -76,6 +79,15 @@ return {
 		config = function()
 			local lspconfig = require('lspconfig')
 			vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename);
+
+			lspconfig.zls.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = { "zls" },
+	filetypes = { "zig", "zir" },
+	root_dir = lspconfig.util.root_pattern("zls.json", "build.zig", ".git"),
+	single_file_support = true,
+})
 
 			lspconfig.astro.setup({
 			   capabilities = capabilities,
